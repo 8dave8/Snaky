@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "501953310939",
+    "firebase_url": "https://szakdolgozat-2f3aa.firebaseio.com",
+    "project_id": "szakdolgozat-2f3aa",
+    "storage_bucket": "szakdolgozat-2f3aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501953310939:android:898b599efb0076176ddcfe",
+        "android_client_info": {
+          "package_name": "com.veresDavid.szakdolgozat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501953310939-qmrsqhegv5ppteq5u7per1pi9jm9hvje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHaplKhaHcbFU0ZqQGkLfbmJBZvWhzRm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501953310939-qmrsqhegv5ppteq5u7per1pi9jm9hvje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
