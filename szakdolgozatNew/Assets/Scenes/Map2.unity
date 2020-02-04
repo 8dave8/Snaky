@@ -9760,7 +9760,7 @@ PrefabInstance:
     - target: {fileID: 8401744626217772003, guid: 74b8bd3cdb08fa74ba1d3c620f2a8894,
         type: 3}
       propertyPath: spawnedObjects
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8401744626217772006, guid: 74b8bd3cdb08fa74ba1d3c620f2a8894,
         type: 3}

@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 namespace UnityStandardAssets.CrossPlatformInput
 {
-	public class AxisTouchButton : MonoBehaviour
+	public class AxisTouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 	{
 		// designed to work in a pair with another axis touch button
 		// (typically with one having -1 and one having 1 axisValues)
@@ -12,14 +12,11 @@ namespace UnityStandardAssets.CrossPlatformInput
 		public float axisValue = 1; // The axis that the value has
 		public float responseSpeed = 3; // The speed at which the axis touch button responds
 		public float returnToCentreSpeed = 3; // The speed at which the button will return to its centre
-        private float baseX;
-        AxisTouchButton m_PairedWith; // Which button this one is paired with
+
+		AxisTouchButton m_PairedWith; // Which button this one is paired with
 		CrossPlatformInputManager.VirtualAxis m_Axis; // A reference to the virtual axis as it is in the cross platform input
-        public void Start()
-        {
-            baseX = axisValue;
-        }
-        void OnEnable()
+
+		void OnEnable()
 		{
 			if (!CrossPlatformInputManager.AxisExists(axisName))
 			{
@@ -33,6 +30,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 			}
 			FindPairedButton();
 		}
+
 		void FindPairedButton()
 		{
 			// find the other button witch which this button should be paired
@@ -50,24 +48,28 @@ namespace UnityStandardAssets.CrossPlatformInput
 				}
 			}
 		}
-        void OnDisable()
+
+		void OnDisable()
 		{
 			// The object is disabled so remove it from the cross platform input system
 			m_Axis.Remove();
 		}
-		public void OnPointerDown()
+
+
+		public void OnPointerDown(PointerEventData data)
 		{
-            if (m_PairedWith == null)
+			if (m_PairedWith == null)
 			{
 				FindPairedButton();
 			}
 			// update the axis and record that the button has been pressed this frame
 			m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, axisValue, responseSpeed * Time.deltaTime));
 		}
-		public void OnPointerUp()
+
+
+		public void OnPointerUp(PointerEventData data)
 		{
 			m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, 0, responseSpeed * Time.deltaTime));
-            m_Axis.Update(0);
-        }
+		}
 	}
 }

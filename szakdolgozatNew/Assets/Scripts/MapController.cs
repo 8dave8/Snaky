@@ -8,12 +8,11 @@ public class MapController : MonoBehaviour
     public GameObject[] maps;
     void Start()
     {
-        for (int i = 0; i <= 5; i++)
+        int i = 0+level;
+        while ( i <= PlayerPrefs.GetInt("Biggestmap"))
         {
-            if(PlayerPrefs.GetInt("Biggestmap") == i+1+level)
-            {
-                maps[i].SetActive(true);
-            } 
+            maps[i].SetActive(true);     
+            i++;
         }
     }
 }

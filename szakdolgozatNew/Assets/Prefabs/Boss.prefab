@@ -179,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587141fac5d854b48a09907be906e397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skin: {fileID: 7719966114182209321}
-  x1: -6
-  x2: 0
+  Skin: {fileID: 7719966114500054903}
+  x1: -13
+  x2: 1.6
   speed: 0.2
 --- !u!114 &7719966114500054901
 MonoBehaviour:
@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Obstacle: {fileID: 7906376750407044286, guid: a47153a2d26eb7a4e9d58127c537f362,
     type: 3}
+  ToNextMap: {fileID: 0}
   SlimeAnim: {fileID: 7719966114182209320}
 --- !u!114 &7719966114500054891
 MonoBehaviour:
@@ -215,7 +216,7 @@ MonoBehaviour:
   - {fileID: 1856659161059189362, guid: 6dd8e773a3c16f543938ec3b4e9f0a92, type: 3}
   - {fileID: 1856659161059189362, guid: 29ab3e2dace7005468dfcb71ffaab79c, type: 3}
   Hearth: {fileID: 2744918712294689747, guid: f3fc428b59f156445a296ec818a9a62c, type: 3}
-  maxHP: 10
+  maxHP: 11
   currentHP: 0
   villog: 0.05
-  spawnedObjects: 10
+  spawnedObjects: 13

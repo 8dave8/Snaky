@@ -20,7 +20,7 @@ public class BarrelScript : MonoBehaviour
         for (int i = 0; i <= 2; i++)
         {
             int rnd = rng.Next(0,2);
-            GameObject coin = Instantiate(Coins[rnd],transform.position, Quaternion.identity);
+            GameObject coin = Instantiate(Coins[rnd],new Vector3(transform.position.x,transform.position.y+1,0), Quaternion.identity);
             coin.GetComponent<Rigidbody2D>().velocity = new Vector2(rng.Next(2, 4),rng.Next(3, 6));
         }    
         Destroy(this.gameObject); 
