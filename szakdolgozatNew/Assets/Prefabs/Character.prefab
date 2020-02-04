@@ -140,7 +140,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7463480696035146863}
-  - component: {fileID: 7463480696035146862}
   - component: {fileID: 7463480696035146860}
   - component: {fileID: 7463480696035146856}
   - component: {fileID: 7463480696035146857}
@@ -149,7 +148,6 @@ GameObject:
   - component: {fileID: 7463480696035146871}
   - component: {fileID: 7463480696035146858}
   - component: {fileID: 7463480696035146870}
-  - component: {fileID: 7480130496906363219}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -174,26 +172,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7463480696035146862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7463480696035146851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3c1f82c05892a4e9e9da7392e3b936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  log: {fileID: 0}
-  kerdes: {fileID: 0}
-  valasz1: {fileID: 0}
-  valasz2: {fileID: 0}
-  valasz3: {fileID: 0}
-  valasz4: {fileID: 0}
-  errorText: {fileID: 0}
-  bookUI: {fileID: 0}
 --- !u!114 &7463480696035146860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,18 +320,7 @@ MonoBehaviour:
   hearth1: {fileID: 0}
   hearth2: {fileID: 0}
   hearth3: {fileID: 0}
---- !u!114 &7480130496906363219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7463480696035146851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cad11730fb0dfcf4a9cb2a8aa3d59ade, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1 &7463480696308696903
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,6 @@ using UnityEngine;
 public class bookController : MonoBehaviour
 {
     public GameObject KerdesMenu, Main;
-
     public int kerdesSzama;
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -15,5 +14,10 @@ public class bookController : MonoBehaviour
             KerdesMenu.SetActive(true);
             gameObject.GetComponent<JsonData>().readData(kerdesSzama);
         }
+    }
+    public void bezar ()
+    {
+        Main.SetActive(true);
+        KerdesMenu.SetActive(false);
     }
 }

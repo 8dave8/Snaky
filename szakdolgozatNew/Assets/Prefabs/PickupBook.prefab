@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb016ec3467dad4f96ed9ad5c71853c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kerdesSzama: 0
+  KerdesMenu: {fileID: 0}
+  Main: {fileID: 0}
+  kerdesSzama: 1
 --- !u!114 &8839880932306445745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,12 +76,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad11730fb0dfcf4a9cb2a8aa3d59ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  load: {fileID: 0}
+  book: {fileID: 7413913164776358680}
   Kerdes: {fileID: 0}
   Valasz1: {fileID: 0}
   Valasz2: {fileID: 0}
   Valasz3: {fileID: 0}
   Valasz4: {fileID: 0}
+  valaszok: []
 --- !u!61 &7413913164776358682
 BoxCollider2D:
   m_ObjectHideFlags: 0

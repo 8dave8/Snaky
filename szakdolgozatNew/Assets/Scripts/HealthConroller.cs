@@ -13,7 +13,7 @@ public class HealthConroller : MonoBehaviour
     public GameObject hearth1;
     public GameObject hearth2;
     public GameObject hearth3;
-    private static int health;
+    public int health;
     private System.Random rng = new System.Random();
     private bool takingDamage = false;
     void Start()
