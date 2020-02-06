@@ -30,27 +30,31 @@ public class JsonData : MonoBehaviour
         if(helyes == valaszok[index].text)
         {
             if(kerdesi == 1 && player.GetComponent<HealthConroller>().health != 3)
+            {
                 player.GetComponent<HealthConroller>().addHealth();
                 Destroy(gameObject);
+            }
             if(kerdesi == 2)
             {
-                Debug.Log("kerdes2");
                 player.GetComponent<PlayerMovement>().rundpeed = 50;
-                StartCoroutine("stoprun", player);
-                Destroy(gameObject);
+                StartCoroutine("stoprun");
+                GetComponent<BoxCollider2D>().enabled = false;
+                GetComponent<SpriteRenderer>().enabled = false;
             }
-
-
-            
-            GetComponent<bookController>().bezar();
         }
+        else
+        {
+            if(kerdesi != 1) Destroy(gameObject);
+        }
+        GetComponent<bookController>().bezar();
     }
-    IEnumerator stoprun(GameObject player)
+    IEnumerator stoprun()
     {
         Debug.Log("stoprun");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10f);
+        Debug.Log("stoprun2");
         player.GetComponent<PlayerMovement>().rundpeed = 25;
-        Debug.Log("stoprun");        
+        Destroy(gameObject);
     }
     public void readData(int kerd)
     {

@@ -12799,11 +12799,6 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 7236834047803086452}
-    - target: {fileID: 3611287421940255965, guid: 50bff411e89f56e40a5e404ae6ed9a49,
-        type: 3}
-      propertyPath: currentmap
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3611287421940255967, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13361,21 +13356,41 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2009322355}
+    - target: {fileID: 7236834046996672593, guid: b5b3225678e260549abff6eeca26726e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckAnsver
+      objectReference: {fileID: 0}
     - target: {fileID: 7236834047062829931, guid: b5b3225678e260549abff6eeca26726e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2009322355}
+    - target: {fileID: 7236834047062829931, guid: b5b3225678e260549abff6eeca26726e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckAnsver
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236834047779178002, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2009322355}
     - target: {fileID: 7236834047779178002, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2009322355}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckAnsver
+      objectReference: {fileID: 0}
     - target: {fileID: 7236834047876301214, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2009322355}
+    - target: {fileID: 7236834047876301214, guid: b5b3225678e260549abff6eeca26726e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckAnsver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5b3225678e260549abff6eeca26726e, type: 3}
 --- !u!1 &7236834047803086452 stripped
@@ -13431,6 +13446,11 @@ PrefabInstance:
       propertyPath: Main
       value: 
       objectReference: {fileID: 1784430359}
+    - target: {fileID: 4773162105922803394, guid: 96f6d2e98a1c0f449948d646d986ccac,
+        type: 3}
+      propertyPath: kerdesSzama
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7413913164776358680, guid: 96f6d2e98a1c0f449948d646d986ccac,
         type: 3}
       propertyPath: m_Name

@@ -6532,6 +6532,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3611287420731483129, guid: 50bff411e89f56e40a5e404ae6ed9a49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611287420731483131, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: m_SortingOrder
@@ -6558,16 +6563,36 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3611287420731483131, guid: 50bff411e89f56e40a5e404ae6ed9a49,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3611287421940255938, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: m_Name
       value: ToNextMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611287421940255938, guid: 50bff411e89f56e40a5e404ae6ed9a49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611287421940255964, guid: 50bff411e89f56e40a5e404ae6ed9a49,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3611287421940255965, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: panel
       value: 
       objectReference: {fileID: 7236834047803086452}
+    - target: {fileID: 3611287421940255965, guid: 50bff411e89f56e40a5e404ae6ed9a49,
+        type: 3}
+      propertyPath: Scene
+      value: MainScene
+      objectReference: {fileID: 0}
     - target: {fileID: 3611287421940255967, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6576,7 +6601,7 @@ PrefabInstance:
     - target: {fileID: 3611287421940255967, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.27
+      value: 5.45
       objectReference: {fileID: 0}
     - target: {fileID: 3611287421940255967, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
@@ -7176,6 +7201,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7719966114500054891, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
+        type: 3}
+      propertyPath: maxHP
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7719966114500054896, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
         type: 3}
       propertyPath: m_Name

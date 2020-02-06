@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KerdesMenu: {fileID: 0}
   Main: {fileID: 0}
-  kerdesSzama: 1
+  kerdesSzama: 2
 --- !u!114 &8839880932306445745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad11730fb0dfcf4a9cb2a8aa3d59ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  book: {fileID: 7413913164776358680}
+  player: {fileID: 0}
   Kerdes: {fileID: 0}
   Valasz1: {fileID: 0}
   Valasz2: {fileID: 0}

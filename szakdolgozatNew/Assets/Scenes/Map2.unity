@@ -9944,12 +9944,12 @@ PrefabInstance:
     - target: {fileID: 3611287421940255967, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.24
+      value: 44.76
       objectReference: {fileID: 0}
     - target: {fileID: 3611287421940255967, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.55
+      value: -20.65
       objectReference: {fileID: 0}
     - target: {fileID: 3611287421940255967, guid: 50bff411e89f56e40a5e404ae6ed9a49,
         type: 3}
@@ -10190,10 +10190,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: bookUI
+    - target: {fileID: 3675618027589035090, guid: 96f6d2e98a1c0f449948d646d986ccac,
+        type: 3}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 344043064}
+      objectReference: {fileID: 7463480695884610981}
+    - target: {fileID: 3675618027589035090, guid: 96f6d2e98a1c0f449948d646d986ccac,
+        type: 3}
+      propertyPath: Kerdes
+      value: 
+      objectReference: {fileID: 1941362064}
     - target: {fileID: 3675618027589035090, guid: 96f6d2e98a1c0f449948d646d986ccac,
         type: 3}
       propertyPath: Valasz1
@@ -10214,40 +10220,20 @@ PrefabInstance:
       propertyPath: Valasz4
       value: 
       objectReference: {fileID: 1169474786}
-    - target: {fileID: 3675618027589035090, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: Kerdes
-      value: 
-      objectReference: {fileID: 1941362064}
-    - target: {fileID: 3675618027589035090, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 7463480695884610981}
-    - target: {fileID: 4773162105922803394, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: kerdesSzama
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4773162105922803394, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: Main
-      value: 
-      objectReference: {fileID: 7236834047803086452}
     - target: {fileID: 4773162105922803394, guid: 96f6d2e98a1c0f449948d646d986ccac,
         type: 3}
       propertyPath: KerdesMenu
       value: 
       objectReference: {fileID: 344043064}
+    - target: {fileID: 4773162105922803394, guid: 96f6d2e98a1c0f449948d646d986ccac,
+        type: 3}
+      propertyPath: Main
+      value: 
+      objectReference: {fileID: 7236834047803086452}
     - target: {fileID: 7413913164776358680, guid: 96f6d2e98a1c0f449948d646d986ccac,
         type: 3}
       propertyPath: m_Name
       value: PickupBook
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413913164776358680, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7413913164776358685, guid: 96f6d2e98a1c0f449948d646d986ccac,
         type: 3}
@@ -10304,36 +10290,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9150776458985299550, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: bookUI
-      value: 
-      objectReference: {fileID: 344043064}
-    - target: {fileID: 9150776458985299550, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: qustion
-      value: 
-      objectReference: {fileID: 1941362064}
-    - target: {fileID: 9150776458985299550, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: answer1
-      value: 
-      objectReference: {fileID: 1328327028}
-    - target: {fileID: 9150776458985299550, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: answer2
-      value: 
-      objectReference: {fileID: 1579008651}
-    - target: {fileID: 9150776458985299550, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: answer3
-      value: 
-      objectReference: {fileID: 162638392}
-    - target: {fileID: 9150776458985299550, guid: 96f6d2e98a1c0f449948d646d986ccac,
-        type: 3}
-      propertyPath: answer4
-      value: 
-      objectReference: {fileID: 1169474786}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96f6d2e98a1c0f449948d646d986ccac, type: 3}
 --- !u!114 &7413913164522786826 stripped

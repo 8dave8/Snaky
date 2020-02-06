@@ -54,6 +54,7 @@ public class EnemyController : MonoBehaviour
                 coin.GetComponent<Rigidbody2D>().velocity = new Vector2(rng.Next(2, 4),rng.Next(3, 6));
             }
          }    
+         PlayerPrefs.SetInt("killed", PlayerPrefs.GetInt("killed")+1);
          Destroy(this.gameObject); 
     }
     IEnumerator Villog()

@@ -23,6 +23,7 @@ public class HealthConroller : MonoBehaviour
     }
     public void takeDamage()
     {
+        PlayerPrefs.SetInt("hpLoss", PlayerPrefs.GetInt("hpLoss")+1);
         health--;
         if (health == 2) hearth3.GetComponent<Image>().sprite = EmptyHearth;
         else if (health == 1) hearth2.GetComponent<Image>().sprite = EmptyHearth;
@@ -33,20 +34,20 @@ public class HealthConroller : MonoBehaviour
     {
         if(health <= 0) Death();
         if(health != 3) health++;
-
+        PlayerPrefs.SetInt("hpGain", PlayerPrefs.GetInt("hpGain")+1);
         if(health == 3) hearth3.GetComponent<Image>().sprite = FullHearth;
         else if(health == 2) hearth2.GetComponent<Image>().sprite = FullHearth;
     }
     void OnTriggerStay2D(Collider2D col)
     {   
-        if (col.gameObject.tag == "Enemy" && gameObject.layer == 0 || col.gameObject.tag == "Spike")
+        if (col.gameObject.tag == "Enemy" && gameObject.layer == 0)
             gotHit();      
     }
     IEnumerator wait()
     {
         takingDamage = true;
         takeDamage();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.2f);
         takingDamage = false;
     }
     private void gotHit()
@@ -62,6 +63,7 @@ public class HealthConroller : MonoBehaviour
     }
     private void Death()
     {
+        PlayerPrefs.SetInt("death",PlayerPrefs.GetInt("death")+1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
