@@ -20,17 +20,14 @@ public class OnFirstStartup : MonoBehaviour
             PlayerPrefs.SetInt("death", 0);
             PlayerPrefs.SetInt("killed", 0);
             PlayerPrefs.SetInt("hpGain", 0);
-            PlayerPrefs.SetInt("hpLoss", 0);            
-            throw;
-        }
-        if (PlayerPrefs.GetInt("started") != 1)
-        {
+            PlayerPrefs.SetInt("hpLoss", 0);
             PlayerPrefs.SetInt("coins", 0);
             PlayerPrefs.SetInt("started", 1);
-            SceneManager.LoadScene("FirstLoad");
-        }else
-        {
-            SceneManager.LoadScene("MainScene");
+            throw;
         }
+    }
+    public void ResetPrefs()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
