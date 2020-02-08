@@ -7,7 +7,6 @@ public class OnFirstStartup : MonoBehaviour
 {
     void Start()
     {
-        PlayerPrefs.DeleteAll();
         try
         {
             PlayerPrefs.GetInt("death");

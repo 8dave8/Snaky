@@ -6,6 +6,7 @@ public class ProjectileSpawner : MonoBehaviour
 {
     public bool FacingLeft;
     public float speed;
+    public float xoffset;
     public GameObject Projectile; 
     void Start()
     {
@@ -15,7 +16,7 @@ public class ProjectileSpawner : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(2.5f);
-        var CurrentObstacle = Instantiate(Projectile,new Vector3(transform.position.x-0.2f,transform.position.y+1.1f,0f),Quaternion.identity);
+        var CurrentObstacle = Instantiate(Projectile,new Vector3(transform.position.x+xoffset,transform.position.y+1.1f,0f),Quaternion.identity);
         CurrentObstacle.GetComponent<Rigidbody2D>().AddForce(new Vector2(speed,0f),ForceMode2D.Impulse);
         StartCoroutine("Spawn");
     }

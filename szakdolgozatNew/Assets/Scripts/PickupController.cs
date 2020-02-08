@@ -28,7 +28,7 @@ public class PickupController : MonoBehaviour
             else if (coins <= 99)  coinText.text = "0"+coins;
             else coinText.text = coins+"";
         }
-        else if(col.gameObject.CompareTag("Hearth") && gameObject.layer == 0 && colliding == false)
+        else if(col.gameObject.CompareTag("Hearth") && gameObject.layer == 0 && colliding == false && GetComponent<HealthConroller>().health != 3)
         {
             Destroy(col.gameObject);
             colliding = true;

@@ -19,6 +19,7 @@ public class HealthConroller : MonoBehaviour
     void Start()
     {
         Physics.IgnoreLayerCollision(11,9);
+        Physics.IgnoreLayerCollision(14,0);
         health = 3;
     }
     public void takeDamage()

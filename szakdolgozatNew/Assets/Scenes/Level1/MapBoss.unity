@@ -7204,7 +7204,12 @@ PrefabInstance:
     - target: {fileID: 7719966114500054891, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
         type: 3}
       propertyPath: maxHP
-      value: 2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7719966114500054891, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
+        type: 3}
+      propertyPath: villog
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7719966114500054896, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
         type: 3}
