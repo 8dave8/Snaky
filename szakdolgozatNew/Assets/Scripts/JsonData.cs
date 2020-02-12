@@ -38,9 +38,13 @@ public class JsonData : MonoBehaviour
             {
                 player.GetComponent<PlayerMovement>().rundpeed = 50;
                 StartCoroutine("stoprun");
-                GetComponent<BoxCollider2D>().enabled = false;
-                GetComponent<SpriteRenderer>().enabled = false;
             }
+            if(kerdesi == 3)
+            {
+                Physics2D.gravity = new Vector2(0f,-3f);
+                StartCoroutine("stoprun");
+            }
+            
         }
         else
         {
@@ -50,10 +54,11 @@ public class JsonData : MonoBehaviour
     }
     IEnumerator stoprun()
     {
-        Debug.Log("stoprun");
-        yield return new WaitForSeconds(10f);
-        Debug.Log("stoprun2");
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(15f);
         player.GetComponent<PlayerMovement>().rundpeed = 25;
+        Physics2D.gravity = new Vector2(0f,-12f);
         Destroy(gameObject);
     }
     public void readData(int kerd)
@@ -105,11 +110,11 @@ public class JsonData : MonoBehaviour
         //kerdesek feltoltese
         Questions k1 = new Questions();
         k1.id = 1;
-        k1.kerdes = "Mennyi 1 + 1?";
-        k1.valasz1 = "2";
-        k1.valasz2 = "1";
-        k1.valasz3 = "3";
-        k1.valasz4 = "4";
+        k1.kerdes = "Mikor halt meg József Attila?";
+        k1.valasz1 = "1937";
+        k1.valasz2 = "1892";
+        k1.valasz3 = "1924";
+        k1.valasz4 = "1925";
         gameData.kerdes.Add(k1);
         
         Questions k2 = new Questions();
@@ -123,48 +128,75 @@ public class JsonData : MonoBehaviour
 
         Questions k3 = new Questions();
         k3.id = 3;
-        k3.kerdes = "Mikor ért véget a II.VH?";
-        k3.valasz1 = "1945";
-        k3.valasz2 = "1944";
-        k3.valasz3 = "1946";
-        k3.valasz4 = "1960";
+        k3.kerdes = "Ki volt Churchill";
+        k3.valasz1 = "Politikus";
+        k3.valasz2 = "Szinesz";
+        k3.valasz3 = "Tanár";
+        k3.valasz4 = "Tábornok";
         gameData.kerdes.Add(k3);
 
         Questions k4 = new Questions();
         k4.id = 4;
-        k4.kerdes = "Mikor ért véget a II.VH?";
-        k4.valasz1 = "1945";
-        k4.valasz2 = "1944";
-        k4.valasz3 = "1946";
-        k4.valasz4 = "1960";
+        k4.kerdes = "Melyik Shakespeare műve?";
+        k4.valasz1 = "Ahogy tetszik";
+        k4.valasz2 = "Tartuffe";
+        k4.valasz3 = "A tóték";
+        k4.valasz4 = "Város a tengerben";
         gameData.kerdes.Add(k4);
 
         Questions k5 = new Questions();
         k5.id = 5;
-        k5.kerdes = "Mikor ért véget a II.VH?";
-        k5.valasz1 = "1945";
-        k5.valasz2 = "1944";
-        k5.valasz3 = "1946";
-        k5.valasz4 = "1960";
+        k5.kerdes = "Hol született Mátyás király?";
+        k5.valasz1 = "Kolozsvár";
+        k5.valasz2 = "Székesfehérvár";
+        k5.valasz3 = "Bécs";
+        k5.valasz4 = "Székelyudvarhely";
         gameData.kerdes.Add(k5);
 
         Questions k6 = new Questions();
         k6.id = 6;
-        k6.kerdes = "Mikor ért véget a II.VH?";
-        k6.valasz1 = "1945";
-        k6.valasz2 = "1944";
-        k6.valasz3 = "1946";
-        k6.valasz4 = "1960";
+        k6.kerdes = "Melyik a helyes Cosinus tétel?";
+        k6.valasz1 = "c^2 = a^2 + b^2";
+        k6.valasz2 = "b^2 = a^2 + c^2";
+        k6.valasz3 = "a^2 = b^2 + c^2";
+        k6.valasz4 = "c^2 = a^3 + b^2";
         gameData.kerdes.Add(k6);
 
         Questions k7 = new Questions();
         k7.id = 7;
-        k7.kerdes = "Mikor ért véget a II.VH?";
-        k7.valasz1 = "1945";
-        k7.valasz2 = "1944";
-        k7.valasz3 = "1946";
-        k7.valasz4 = "1960";
+        k7.kerdes = "Hogyan folytatódik? 'Sehonnani bitang ember,'";
+        k7.valasz1 = "Ki most, ha kell, halni nem mer,";
+        k7.valasz2 = "Máltó régi nagy hiréhez,";
+        k7.valasz3 = "Unokáink leborulnak,";
+        k7.valasz4 = "Kárhozottak ősapáink,";
         gameData.kerdes.Add(k7);
+
+        Questions k8 = new Questions();
+        k8.id = 8;
+        k8.kerdes = "Hogyan folytatódik? 'Sehonnani bitang ember,'";
+        k8.valasz1 = "Ki most, ha kell, halni nem mer,";
+        k8.valasz2 = "Máltó régi nagy hiréhez,";
+        k8.valasz3 = "Unokáink leborulnak,";
+        k8.valasz4 = "Kárhozottak ősapáink,";
+        gameData.kerdes.Add(k8);
+
+        Questions k9 = new Questions();
+        k9.id = 9;
+        k9.kerdes = "Hogyan folytatódik? 'Sehonnani bitang ember,'";
+        k9.valasz1 = "Ki most, ha kell, halni nem mer,";
+        k9.valasz2 = "Máltó régi nagy hiréhez,";
+        k9.valasz3 = "Unokáink leborulnak,";
+        k9.valasz4 = "Kárhozottak ősapáink,";
+        gameData.kerdes.Add(k9);
+
+        Questions k10 = new Questions();
+        k10.id = 10;
+        k10.kerdes = "Hogyan folytatódik? 'Sehonnani bitang ember,'";
+        k10.valasz1 = "Ki most, ha kell, halni nem mer,";
+        k10.valasz2 = "Máltó régi nagy hiréhez,";
+        k10.valasz3 = "Unokáink leborulnak,";
+        k10.valasz4 = "Kárhozottak ősapáink,";
+        gameData.kerdes.Add(k10);
         //kerdesek mentese
         JsoWrapper wrapper = new JsoWrapper();
         wrapper.gameData = gameData;
