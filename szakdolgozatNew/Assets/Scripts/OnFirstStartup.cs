@@ -22,11 +22,18 @@ public class OnFirstStartup : MonoBehaviour
             PlayerPrefs.SetInt("hpLoss", 0);
             PlayerPrefs.SetInt("coins", 0);
             PlayerPrefs.SetInt("started", 1);
+            PlayerPrefs.SetInt("canThrow", 0);
             throw;
         }
+        PlayerPrefs.SetInt("canThrow",0);
     }
     public void ResetPrefs()
     {
         PlayerPrefs.DeleteAll();
+    }
+    public void EnableThrowing()
+    {
+        if(PlayerPrefs.GetInt("coins") >= 300)
+            PlayerPrefs.SetInt("canThrow",1);
     }
 }

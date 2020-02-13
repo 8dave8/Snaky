@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1/MapBoss.unity
     guid: 87df185bb4d1c2540b175680dab2afa9
+  - enabled: 1
+    path: Assets/Scenes/Level2/Map7.unity
+    guid: 48f03f17be2cad94b9ec6ec2f9bae328
   m_configObjects: {}

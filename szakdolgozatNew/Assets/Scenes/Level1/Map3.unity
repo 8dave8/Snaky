@@ -186,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47161763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: -4.8, z: -8.3}
+  m_LocalPosition: {x: -5.07, y: -4.8, z: -8.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1999572483}
@@ -16335,7 +16335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108407114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: -4.8, z: -8.3}
+  m_LocalPosition: {x: -5.07, y: -4.8, z: -8.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17355,6 +17355,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1519771475147340908, guid: b5b3225678e260549abff6eeca26726e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1720535585}
+    - target: {fileID: 1519771475147340908, guid: b5b3225678e260549abff6eeca26726e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Throw
+      objectReference: {fileID: 0}
     - target: {fileID: 2160381313870835546, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_IsActive
@@ -17523,6 +17533,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7236834047803086451}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7236834047803086453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8987315090297252995, guid: b5b3225678e260549abff6eeca26726e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7236834047803086451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7236834047803086454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6854998231198037219, guid: b5b3225678e260549abff6eeca26726e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7236834047803086451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7236834047803086455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7682441923598915258, guid: b5b3225678e260549abff6eeca26726e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7236834047803086451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7413913164522786825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17656,6 +17684,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7463480695388813189, guid: 7965c52f643174240b8bfab0f156251e,
+        type: 3}
+      propertyPath: Pebble1
+      value: 
+      objectReference: {fileID: 7236834047803086455}
+    - target: {fileID: 7463480695388813189, guid: 7965c52f643174240b8bfab0f156251e,
+        type: 3}
+      propertyPath: Pebble3
+      value: 
+      objectReference: {fileID: 7236834047803086453}
+    - target: {fileID: 7463480695388813189, guid: 7965c52f643174240b8bfab0f156251e,
+        type: 3}
+      propertyPath: Pebble2
+      value: 
+      objectReference: {fileID: 7236834047803086454}
     - target: {fileID: 7463480696035146851, guid: 7965c52f643174240b8bfab0f156251e,
         type: 3}
       propertyPath: m_Name
@@ -17699,7 +17742,7 @@ PrefabInstance:
     - target: {fileID: 7463480696035146863, guid: 7965c52f643174240b8bfab0f156251e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9
+      value: -5.07
       objectReference: {fileID: 0}
     - target: {fileID: 7463480696035146863, guid: 7965c52f643174240b8bfab0f156251e,
         type: 3}

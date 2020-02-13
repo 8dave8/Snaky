@@ -102,9 +102,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterAnimator: {fileID: 7463480696308696903}
+  Obstacle: {fileID: 3591834122915805466, guid: da14b69138fdef64385988cbe62b8b66,
+    type: 3}
+  Pebble1: {fileID: 0}
+  Pebble2: {fileID: 0}
+  Pebble3: {fileID: 0}
+  EmptyPebble: {fileID: 6472275828451707803, guid: 33964038ffae5cf49b602a571a2797bd,
+    type: 3}
+  FullPebble: {fileID: -572723731492816340, guid: 33964038ffae5cf49b602a571a2797bd,
+    type: 3}
   box: {fileID: 7463480695388813188}
   attackDuration: 0.14
   attackStartDuration: 0.15
+  pebbles: 3
 --- !u!61 &7463480695388813188
 BoxCollider2D:
   m_ObjectHideFlags: 0
