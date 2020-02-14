@@ -28,12 +28,19 @@ public class PickupController : MonoBehaviour
             else if (coins <= 99)  coinText.text = "0"+coins;
             else coinText.text = coins+"";
         }
-        else if(col.gameObject.CompareTag("Hearth") && gameObject.layer == 0 && colliding == false && GetComponent<HealthConroller>().health != 3)
+        if(col.gameObject.CompareTag("Hearth") && gameObject.layer == 0 && colliding == false && GetComponent<HealthConroller>().health != 3)
         {
             Destroy(col.gameObject);
             colliding = true;
             StartCoroutine("wait");
             GetComponent<HealthConroller>().addHealth();
+        }
+        if(col.gameObject.CompareTag("Pebble") && gameObject.layer == 0 && colliding == false && GetComponentInChildren<attackController>().pebbles !=3)
+        {
+            Destroy(col.gameObject);
+            colliding = true;
+            StartCoroutine("wait");
+            GetComponentInChildren<attackController>().pickupPebble();
         }
     }
     IEnumerator wait()

@@ -12,6 +12,7 @@ TagManager:
   - Hearth
   - Barrel
   - Spike
+  - Pebble
   layers:
   - Default
   - TransparentFX

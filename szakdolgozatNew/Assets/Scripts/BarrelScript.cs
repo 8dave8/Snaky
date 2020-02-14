@@ -6,6 +6,7 @@ public class BarrelScript : MonoBehaviour
 {
     public GameObject particles;
     public GameObject[] Coins;
+    public GameObject pebble;
     private static System.Random rng;
     void Start()
     {
@@ -17,8 +18,13 @@ public class BarrelScript : MonoBehaviour
     }
     public void death(){         
         Instantiate(particles,transform.position,Quaternion.identity);
-        for (int i = 0; i <= 2; i++)
-        {
+        for (int i = 0; i <= 2 + PlayerPrefs.GetInt("moreLoot"); i++)
+        {   
+            if(rng.Next(0,7) ==1 && PlayerPrefs.GetInt("canThrow") == 1)
+            {
+                GameObject Currentpebble = Instantiate(pebble,new Vector3(transform.position.x,transform.position.y+1,0), Quaternion.identity);
+                Currentpebble.GetComponent<Rigidbody2D>().velocity = new Vector2(rng.Next(2, 4),rng.Next(3, 6));
+            }
             int rnd = rng.Next(0,2);
             GameObject coin = Instantiate(Coins[rnd],new Vector3(transform.position.x,transform.position.y+1,0), Quaternion.identity);
             coin.GetComponent<Rigidbody2D>().velocity = new Vector2(rng.Next(2, 4),rng.Next(3, 6));

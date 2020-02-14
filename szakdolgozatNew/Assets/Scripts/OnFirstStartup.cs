@@ -23,9 +23,11 @@ public class OnFirstStartup : MonoBehaviour
             PlayerPrefs.SetInt("coins", 0);
             PlayerPrefs.SetInt("started", 1);
             PlayerPrefs.SetInt("canThrow", 0);
+            PlayerPrefs.SetInt("moreLoot", 20);
             throw;
         }
-        PlayerPrefs.SetInt("canThrow",0);
+        //PlayerPrefs.SetInt("coins",999);
+        //PlayerPrefs.SetInt("moreLoot", 15);      
     }
     public void ResetPrefs()
     {
@@ -34,6 +36,19 @@ public class OnFirstStartup : MonoBehaviour
     public void EnableThrowing()
     {
         if(PlayerPrefs.GetInt("coins") >= 300)
+        {
             PlayerPrefs.SetInt("canThrow",1);
+            PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins")-300);
+            Debug.Log("EnaThrow");
+        }
+    }
+    public void EnableMoreLoot()
+    {
+        if(PlayerPrefs.GetInt("coins") >= 500)
+        {
+            Debug.Log("EnaLoot");
+            PlayerPrefs.SetInt("moreLoot",PlayerPrefs.GetInt("moreLoot")+1);
+            PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins")-500);
+        }
     }
 }

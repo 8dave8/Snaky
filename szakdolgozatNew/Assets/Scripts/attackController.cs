@@ -21,6 +21,7 @@ public class attackController : MonoBehaviour
     }
     private void ThrowPebble()
     {
+        CharacterAnimator.GetComponent<Animator>().Play("Throw");
         pebbles--;
         if (pebbles == 2) Pebble3.GetComponent<Image>().sprite = EmptyPebble;
         else if (pebbles == 1) Pebble2.GetComponent<Image>().sprite = EmptyPebble;
@@ -31,7 +32,7 @@ public class attackController : MonoBehaviour
         if(pebbles != 3) pebbles++;
         if(pebbles == 3) Pebble3.GetComponent<Image>().sprite = FullPebble;
         else if(pebbles == 2) Pebble2.GetComponent<Image>().sprite = FullPebble;
-        else if(pebbles == 1) Pebble2.GetComponent<Image>().sprite = FullPebble;
+        else if(pebbles == 1) Pebble1.GetComponent<Image>().sprite = FullPebble;
     }
     public void EnableDamage()
     {

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PrefsLoad : MonoBehaviour
 {
-    public Text kill, death, hpgain, hploss, coins;
+    public Text kill, death, hpgain, hploss, coins, shopCoins;
     void Start()
     {
         kill.text = "Killed: "+PlayerPrefs.GetInt("killed").ToString();
@@ -13,5 +13,6 @@ public class PrefsLoad : MonoBehaviour
         hpgain.text = "Hp gain: "+PlayerPrefs.GetInt("hpGain").ToString();
         hploss.text = "Hp loss: "+PlayerPrefs.GetInt("hpLoss").ToString();
         coins.text = "Coins: "+PlayerPrefs.GetInt("coins").ToString();
+        shopCoins.text = "You have "+PlayerPrefs.GetInt("coins")+" coins";
     }
 }

@@ -157,3 +157,4 @@ MonoBehaviour:
   Coins:
   - {fileID: 1856659161059189362, guid: 6dd8e773a3c16f543938ec3b4e9f0a92, type: 3}
   - {fileID: 1856659161059189362, guid: 29ab3e2dace7005468dfcb71ffaab79c, type: 3}
+  pebble: {fileID: 1856659161059189362, guid: 7d6988c708cca194f84c1fc5f2bb718b, type: 3}
