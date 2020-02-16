@@ -18,8 +18,16 @@ public class ToNextMapScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (RequireKey && HasKey) StartCoroutine("Loadscene");
-            else if (!RequireKey) StartCoroutine("Loadscene");
+            if (RequireKey && HasKey) 
+            {
+                col.gameObject.GetComponent<PickupController>().saveCoins();
+                StartCoroutine("Loadscene");
+            }
+            else if (!RequireKey) 
+            {
+                col.gameObject.GetComponent<PickupController>().saveCoins();
+                StartCoroutine("Loadscene");
+            }
         }
     }
     IEnumerator Loadscene()

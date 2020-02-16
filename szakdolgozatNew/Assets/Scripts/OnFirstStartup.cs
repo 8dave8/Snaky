@@ -23,7 +23,7 @@ public class OnFirstStartup : MonoBehaviour
             PlayerPrefs.SetInt("coins", 0);
             PlayerPrefs.SetInt("started", 1);
             PlayerPrefs.SetInt("canThrow", 0);
-            PlayerPrefs.SetInt("moreLoot", 20);
+            PlayerPrefs.SetInt("moreLoot", 0);
             throw;
         }
         //PlayerPrefs.SetInt("coins",999);

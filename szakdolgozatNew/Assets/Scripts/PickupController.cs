@@ -7,13 +7,12 @@ public class PickupController : MonoBehaviour
 {
     public Text coinText;
     private bool colliding;
+    private int currentCoins;
     void Start()
     {
+        currentCoins = PlayerPrefs.GetInt("coins");
         colliding = false;
-        int coins = PlayerPrefs.GetInt("coins");
-        if (coins <= 9) coinText.text = "00"+coins;
-        else if (coins <= 99) coinText.text = "0"+coins;
-        else coinText.text = coins+"";
+        coinText.text = currentCoins.ToString("000");
     }
     void OnTriggerStay2D(Collider2D col)
     {
@@ -22,11 +21,8 @@ public class PickupController : MonoBehaviour
             Destroy(col.transform.parent.gameObject);
             colliding = true;
             StartCoroutine("wait");
-            int coins = PlayerPrefs.GetInt("coins") + 1;
-            PlayerPrefs.SetInt("coins", coins);
-            if (coins <= 9) coinText.text = "00"+coins;
-            else if (coins <= 99)  coinText.text = "0"+coins;
-            else coinText.text = coins+"";
+            currentCoins++;
+            coinText.text = currentCoins.ToString("000");
         }
         if(col.gameObject.CompareTag("Hearth") && gameObject.layer == 0 && colliding == false && GetComponent<HealthConroller>().health != 3)
         {
@@ -48,5 +44,8 @@ public class PickupController : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         colliding = false;
     }
-
+    public void saveCoins()
+    {
+        PlayerPrefs.SetInt("coins", currentCoins);
+    }
 }

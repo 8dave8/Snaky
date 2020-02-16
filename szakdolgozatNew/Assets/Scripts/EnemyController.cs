@@ -40,7 +40,7 @@ public class EnemyController : MonoBehaviour
         StartCoroutine("Villog");
     }
     public void death(){         
-         for (int i = 0; i < spawnedObjects; i++)
+         for (int i = 0; i < spawnedObjects+PlayerPrefs.GetInt("moreLoot"); i++)
          {
             if (rng.Next(0,5) == 1)
             {

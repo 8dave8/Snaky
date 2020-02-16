@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 7577524883760120161}
   m_Layer: 10
   m_Name: coinGraphics
-  m_TagString: Pebble
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
