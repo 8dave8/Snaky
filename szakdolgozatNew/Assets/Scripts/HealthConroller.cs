@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class HealthConroller : MonoBehaviour
 {
+    public bool kerdesdmg =false;
     public Rigidbody2D rb;
     public Sprite FullHearth;
     public Sprite EmptyHearth;
@@ -47,9 +48,10 @@ public class HealthConroller : MonoBehaviour
     IEnumerator wait()
     {
         takingDamage = true;
-        takeDamage();
+        if(!kerdesdmg) takeDamage();
         yield return new WaitForSeconds(1.2f);
         takingDamage = false;
+        kerdesdmg = false;
     }
     private void gotHit()
     {

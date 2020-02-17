@@ -39,12 +39,36 @@ public class JsonData : MonoBehaviour
                 player.GetComponent<PlayerMovement>().rundpeed = 50;
                 StartCoroutine("stoprun");
             }
-            if(kerdesi == 3)
+            if(kerdesi == 3 || kerdesi == 4)
             {
                 Physics2D.gravity = new Vector2(0f,-3f);
                 StartCoroutine("stoprun");
             }
-            
+            if(kerdesi == 5)
+            {
+                var enemies = GameObject.FindGameObjectsWithTag("enemy");
+                foreach (var e in enemies)
+                {
+                    e.GetComponent<EnemyController>().receiveDamage();
+                }
+                StartCoroutine("stoprun");
+            }
+            if(kerdesi == 6)
+            {
+                player.GetComponent<HealthConroller>().kerdesdmg = true;
+                StartCoroutine("stoprun");
+            }
+            if(kerdesi == 7)
+            {
+                StartCoroutine("jump");
+                StartCoroutine("stoprun");
+            }
+            if(kerdesi == 8)
+            {
+                player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+                player.GetComponent<Rigidbody2D>().freezeRotation = true;
+                StartCoroutine("stoprun");
+            }
         }
         else
         {
@@ -52,12 +76,20 @@ public class JsonData : MonoBehaviour
         }
         GetComponent<bookController>().bezar();
     }
+    IEnumerator jump()
+    {
+        player.GetComponent<Rigidbody2D>().AddForce(new Vector2(10,60),ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.5f);
+        player.GetComponent<Rigidbody2D>().AddForce(new Vector2(800,-20),ForceMode2D.Impulse);
+    }
     IEnumerator stoprun()
     {
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(15f);
         player.GetComponent<PlayerMovement>().rundpeed = 25;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         Physics2D.gravity = new Vector2(0f,-12f);
         Destroy(gameObject);
     }

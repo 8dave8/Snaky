@@ -29430,7 +29430,7 @@ PrefabInstance:
     - target: {fileID: 4773162105922803394, guid: 96f6d2e98a1c0f449948d646d986ccac,
         type: 3}
       propertyPath: kerdesSzama
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7413913164776358680, guid: 96f6d2e98a1c0f449948d646d986ccac,
         type: 3}
