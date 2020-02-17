@@ -3001,7 +3001,7 @@ MonoBehaviour:
 
     Loot
 
-    500 coins'
+    1000 coins'
 --- !u!222 &644192483
 CanvasRenderer:
   m_ObjectHideFlags: 0

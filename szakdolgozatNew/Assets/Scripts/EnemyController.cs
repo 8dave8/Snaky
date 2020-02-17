@@ -42,7 +42,7 @@ public class EnemyController : MonoBehaviour
     public void death(){         
          for (int i = 0; i < spawnedObjects+PlayerPrefs.GetInt("moreLoot"); i++)
          {
-            if (rng.Next(0,5) == 1)
+            if (rng.Next(0,10) == 1)
             {
                 GameObject hearth =  Instantiate(Hearth,new Vector3(transform.position.x,transform.position.y+1.2f,0),Quaternion.identity);
                 hearth.GetComponent<Rigidbody2D>().velocity = new Vector2(rng.Next(2, 4),rng.Next(3, 6));

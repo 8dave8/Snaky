@@ -21,7 +21,15 @@ public class PickupController : MonoBehaviour
             Destroy(col.transform.parent.gameObject);
             colliding = true;
             StartCoroutine("wait");
-            currentCoins++;
+            currentCoins += 10;
+            coinText.text = currentCoins.ToString("000");
+        }
+        if(col.gameObject.CompareTag("SilverCoin") && gameObject.layer == 0 && colliding == false)
+        {  
+            Destroy(col.transform.parent.gameObject);
+            colliding = true;
+            StartCoroutine("wait");
+            currentCoins += 5;
             coinText.text = currentCoins.ToString("000");
         }
         if(col.gameObject.CompareTag("Hearth") && gameObject.layer == 0 && colliding == false && GetComponent<HealthConroller>().health != 3)
@@ -36,6 +44,8 @@ public class PickupController : MonoBehaviour
             Destroy(col.gameObject);
             colliding = true;
             StartCoroutine("wait");
+            GetComponentInChildren<attackController>().pickupPebble();
+            GetComponentInChildren<attackController>().pickupPebble();
             GetComponentInChildren<attackController>().pickupPebble();
         }
     }

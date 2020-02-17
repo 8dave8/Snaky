@@ -44,11 +44,11 @@ public class OnFirstStartup : MonoBehaviour
     }
     public void EnableMoreLoot()
     {
-        if(PlayerPrefs.GetInt("coins") >= 500)
+        if(PlayerPrefs.GetInt("coins") >= 1000)
         {
             Debug.Log("EnaLoot");
             PlayerPrefs.SetInt("moreLoot",PlayerPrefs.GetInt("moreLoot")+1);
-            PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins")-500);
+            PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins")-1000);
         }
     }
 }

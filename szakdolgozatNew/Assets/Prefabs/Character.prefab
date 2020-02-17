@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7463480696035146860}
-  rundpeed: 25
+  rundpeed: 32
   jump: 0
 --- !u!61 &7463480696035146861
 BoxCollider2D:

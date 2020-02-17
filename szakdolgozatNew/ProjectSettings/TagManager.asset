@@ -13,6 +13,8 @@ TagManager:
   - Barrel
   - Spike
   - Pebble
+  - camera
+  - SilverCoin
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - character
   - coins
   - HardEntity
-  - 
+  - cameraborder
   - 
   - 
   - 
