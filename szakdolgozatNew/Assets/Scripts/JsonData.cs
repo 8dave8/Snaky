@@ -69,11 +69,18 @@ public class JsonData : MonoBehaviour
                 player.GetComponent<Rigidbody2D>().freezeRotation = true;
                 StartCoroutine("stoprun");
             }
+            if(kerdesi == 9)
+            {
+                player.GetComponent<PlayerMovement>().rundpeed = 25;
+                StartCoroutine("stoprun");
+            }
+            if(kerdesi == 10)
+            {
+                player.GetComponent<PlayerMovement>().rundpeed = 50;
+                StartCoroutine("stoprun");
+            }
         }
-        else
-        {
-            if(kerdesi != 1) Destroy(gameObject);
-        }
+        else if(kerdesi != 1) Destroy(gameObject);
         GetComponent<bookController>().bezar();
     }
     IEnumerator jump()
@@ -87,7 +94,7 @@ public class JsonData : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(15f);
-        player.GetComponent<PlayerMovement>().rundpeed = 25;
+        player.GetComponent<PlayerMovement>().rundpeed = 32;
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         Physics2D.gravity = new Vector2(0f,-12f);
@@ -187,7 +194,7 @@ public class JsonData : MonoBehaviour
 
         Questions k6 = new Questions();
         k6.id = 6;
-        k6.kerdes = "Melyik a helyes Cosinus tétel?";
+        k6.kerdes = "Melyik a helyes Pitagorasz tétel?";
         k6.valasz1 = "c^2 = a^2 + b^2";
         k6.valasz2 = "b^2 = a^2 + c^2";
         k6.valasz3 = "a^2 = b^2 + c^2";
@@ -205,29 +212,29 @@ public class JsonData : MonoBehaviour
 
         Questions k8 = new Questions();
         k8.id = 8;
-        k8.kerdes = "Hogyan folytatódik? 'Sehonnani bitang ember,'";
-        k8.valasz1 = "Ki most, ha kell, halni nem mer,";
-        k8.valasz2 = "Máltó régi nagy hiréhez,";
-        k8.valasz3 = "Unokáink leborulnak,";
-        k8.valasz4 = "Kárhozottak ősapáink,";
+        k8.kerdes = "Melyik Arany János verse?";
+        k8.valasz1 = "Mátyás anyja";
+        k8.valasz2 = "Szeptemer végén";
+        k8.valasz3 = "Arany Lacinak";
+        k8.valasz4 = "A föl-földobott kő";
         gameData.kerdes.Add(k8);
 
         Questions k9 = new Questions();
         k9.id = 9;
-        k9.kerdes = "Hogyan folytatódik? 'Sehonnani bitang ember,'";
-        k9.valasz1 = "Ki most, ha kell, halni nem mer,";
-        k9.valasz2 = "Máltó régi nagy hiréhez,";
-        k9.valasz3 = "Unokáink leborulnak,";
-        k9.valasz4 = "Kárhozottak ősapáink,";
+        k9.kerdes = "Minek az istennője Aphrodité";
+        k9.valasz1 = "A szerelemé";
+        k9.valasz2 = "A halottaké";
+        k9.valasz3 = "A tavaszé";
+        k9.valasz4 = "A termés";
         gameData.kerdes.Add(k9);
 
         Questions k10 = new Questions();
         k10.id = 10;
-        k10.kerdes = "Hogyan folytatódik? 'Sehonnani bitang ember,'";
-        k10.valasz1 = "Ki most, ha kell, halni nem mer,";
-        k10.valasz2 = "Máltó régi nagy hiréhez,";
-        k10.valasz3 = "Unokáink leborulnak,";
-        k10.valasz4 = "Kárhozottak ősapáink,";
+        k10.kerdes = "Hány szöge van egy deltoidnak?";
+        k10.valasz1 = "4";
+        k10.valasz2 = "3";
+        k10.valasz3 = "5";
+        k10.valasz4 = "6";
         gameData.kerdes.Add(k10);
         //kerdesek mentese
         JsoWrapper wrapper = new JsoWrapper();
