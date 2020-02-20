@@ -8,11 +8,11 @@ public class PrefsLoad : MonoBehaviour
     public Text kill, death, hpgain, hploss, coins, shopCoins;
     void Start()
     {
-        kill.text = "Killed: "+PlayerPrefs.GetInt("killed").ToString();
-        death.text = "Died: "+PlayerPrefs.GetInt("death").ToString();
-        hpgain.text = "Hp gain: "+PlayerPrefs.GetInt("hpGain").ToString();
-        hploss.text = "Hp loss: "+PlayerPrefs.GetInt("hpLoss").ToString();
-        coins.text = "Coins: "+PlayerPrefs.GetInt("coins").ToString();
-        shopCoins.text = "You have "+PlayerPrefs.GetInt("coins")+" coins";
+        kill.text = "Ölve: "+PlayerPrefs.GetInt("killed").ToString();
+        death.text = "Halál: "+PlayerPrefs.GetInt("death").ToString();
+        hpgain.text = "Élet +: "+PlayerPrefs.GetInt("hpGain").ToString();
+        hploss.text = "Élet -: "+PlayerPrefs.GetInt("hpLoss").ToString();
+        coins.text = "Érmék: "+PlayerPrefs.GetInt("coins").ToString();
+        shopCoins.text = PlayerPrefs.GetInt("coins")+" érméd van";
     }
 }

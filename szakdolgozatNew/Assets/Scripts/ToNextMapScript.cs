@@ -27,6 +27,7 @@ public class ToNextMapScript : MonoBehaviour
             {
                 col.gameObject.GetComponent<PickupController>().saveCoins();
                 StartCoroutine("Loadscene");
+                col.gameObject.GetComponent<HealthConroller>().addHealth();
             }
         }
     }

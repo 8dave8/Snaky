@@ -30,6 +30,7 @@ ScriptsOnlyBuild:
     - ToNextMapScript
     - attackController
     - bookController
+    - boss2Controller
     - emableThrow
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -37,6 +38,7 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -45,8 +47,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1541,6 +1545,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 62
@@ -1574,6 +1580,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10118}
     - Class: 114
+      Script: {instanceID: 10134}
+    - Class: 114
       Script: {instanceID: 10338}
     - Class: 114
       Script: {instanceID: 10382}
@@ -1596,7 +1604,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10934}
     - Class: 114
+      Script: {instanceID: 10942}
+    - Class: 114
       Script: {instanceID: 11222}
+    - Class: 114
+      Script: {instanceID: 11248}
     - Class: 114
       Script: {instanceID: 11466}
     - Class: 114
@@ -1611,6 +1623,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11860}
     - Class: 114
       Script: {instanceID: 11892}
+    - Class: 114
+      Script: {instanceID: 31842}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1632,6 +1646,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 251
       Script: {instanceID: 0}
     - Class: 19719996
       Script: {instanceID: 0}
@@ -2281,7 +2297,7 @@ ScriptsOnlyBuild:
     className: PickupController
   - hash:
       serializedVersion: 2
-      Hash: d30d8450ea9ef66991e082c42ca07e90
+      Hash: b0bcee4f0cfc29deb464ec6df0e6a133
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossController
@@ -2329,7 +2345,7 @@ ScriptsOnlyBuild:
     className: WaypointCircuit
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 812b5ba8976a224d98dcf8a5dd831c26
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OnFirstStartup
@@ -2717,6 +2733,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 998004cc6076f403e3b059cd4fdf6866
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: boss2Controller
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

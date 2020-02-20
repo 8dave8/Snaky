@@ -24,6 +24,10 @@ public class JsonData : MonoBehaviour
         valaszok[3] = Valasz4;
         path = Application.persistentDataPath +"/"+filename;
         saveData();
+        player.GetComponent<PlayerMovement>().rundpeed = 32;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        Physics2D.gravity = new Vector2(0f,-12f);
     }
     public void CheckAnsver(int index)
     {
@@ -89,7 +93,7 @@ public class JsonData : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         player.GetComponent<Rigidbody2D>().AddForce(new Vector2(800,-20),ForceMode2D.Impulse);
     }
-    IEnumerator stoprun()
+    public IEnumerator stoprun()
     {
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
@@ -230,7 +234,7 @@ public class JsonData : MonoBehaviour
 
         Questions k10 = new Questions();
         k10.id = 10;
-        k10.kerdes = "Hány szöge van egy deltoidnak?";
+        k10.kerdes = "Hány éle van egy deltoidnak?";
         k10.valasz1 = "4";
         k10.valasz2 = "3";
         k10.valasz3 = "5";

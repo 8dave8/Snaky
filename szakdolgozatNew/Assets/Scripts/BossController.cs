@@ -5,11 +5,13 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     public GameObject Obstacle, ToNextMap;
+    public float FixXpos;
     public Animator SlimeAnim;
     private System.Random rng;
     private GameObject CurrentObstacle;
     void Start()
     {
+        transform.position = new Vector3(FixXpos,transform.position.y,transform.position.z);
         rng = new System.Random();
         StartCoroutine("Spawn");
     }

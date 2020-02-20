@@ -62,7 +62,7 @@ public class attackController : MonoBehaviour
             var currentObstacle = Instantiate(Obstacle,new Vector3(transform.position.x,transform.position.y+1.5f,0),Quaternion.identity);
             if(gameObject.transform.parent.localScale.x == -5 && x == 8) x = -8f;
             else if(gameObject.transform.parent.localScale.x == 5 && x == -8) x = 8f;
-            currentObstacle.GetComponent<Rigidbody2D>().AddForce(new Vector2(x,5f),ForceMode2D.Impulse);
+            currentObstacle.GetComponent<Rigidbody2D>().AddForce(new Vector2(x,3f),ForceMode2D.Impulse);
         }
     }
 }

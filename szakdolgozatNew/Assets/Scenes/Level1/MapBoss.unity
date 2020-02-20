@@ -21653,10 +21653,15 @@ PrefabInstance:
       propertyPath: ToNextMap
       value: 
       objectReference: {fileID: 251470749}
+    - target: {fileID: 7719966114500054901, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
+        type: 3}
+      propertyPath: FixXpos
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 7719966114500054903, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.86
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 7719966114500054903, guid: 2fadea3e1cc4bd84d87189ff84f9234b,
         type: 3}
