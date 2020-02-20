@@ -29,7 +29,7 @@ public class JsonData : MonoBehaviour
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         Physics2D.gravity = new Vector2(0f,-12f);
     }
-    public void CheckAnsver(int index)
+    public void checkAnsver(int index)
     {
         if(helyes == valaszok[index].text)
         {
@@ -41,51 +41,59 @@ public class JsonData : MonoBehaviour
             if(kerdesi == 2)
             {
                 player.GetComponent<PlayerMovement>().rundpeed = 50;
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
             if(kerdesi == 3 || kerdesi == 4)
             {
                 Physics2D.gravity = new Vector2(0f,-3f);
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
             if(kerdesi == 5)
             {
-                var enemies = GameObject.FindGameObjectsWithTag("enemy");
+                var enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (var e in enemies)
                 {
-                    e.GetComponent<EnemyController>().receiveDamage();
+                    try
+                    {
+                        e.GetComponent<EnemyController>().receiveDamage();
+                    }
+                    catch (System.Exception)
+                    {
+                        break;
+                        throw;
+                    }
                 }
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
             if(kerdesi == 6)
             {
                 player.GetComponent<HealthConroller>().kerdesdmg = true;
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
             if(kerdesi == 7)
             {
                 StartCoroutine("jump");
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
             if(kerdesi == 8)
             {
                 player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
                 player.GetComponent<Rigidbody2D>().freezeRotation = true;
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
             if(kerdesi == 9)
             {
                 player.GetComponent<PlayerMovement>().rundpeed = 25;
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
             if(kerdesi == 10)
             {
                 player.GetComponent<PlayerMovement>().rundpeed = 50;
-                StartCoroutine("stoprun");
+                StartCoroutine("stopBonuses");
             }
         }
         else if(kerdesi != 1) Destroy(gameObject);
-        GetComponent<bookController>().bezar();
+        GetComponent<bookController>().closeBookMenu();
     }
     IEnumerator jump()
     {
@@ -93,7 +101,7 @@ public class JsonData : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         player.GetComponent<Rigidbody2D>().AddForce(new Vector2(800,-20),ForceMode2D.Impulse);
     }
-    public IEnumerator stoprun()
+    public IEnumerator stopBonuses()
     {
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;

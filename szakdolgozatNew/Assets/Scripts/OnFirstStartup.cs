@@ -10,6 +10,7 @@ public class OnFirstStartup : MonoBehaviour
     public Button throwBT;
     void Start()
     {
+        
         try
         {
             PlayerPrefs.GetInt("death");
@@ -59,7 +60,7 @@ public class OnFirstStartup : MonoBehaviour
     }
     public void EnableMoreLoot()
     {
-        if(PlayerPrefs.GetInt("coins") >= 1000)
+        if(PlayerPrefs.GetInt("coins") >= 1000 && PlayerPrefs.GetInt("moreLoot") < 5)
         {
             PlayerPrefs.SetInt("moreLoot",PlayerPrefs.GetInt("moreLoot")+1);
             PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins")-1000);

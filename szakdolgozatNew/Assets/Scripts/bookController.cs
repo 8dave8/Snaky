@@ -15,7 +15,7 @@ public class bookController : MonoBehaviour
             gameObject.GetComponent<JsonData>().readData(kerdesSzama);
         }
     }
-    public void bezar ()
+    public void closeBookMenu ()
     {
         Main.SetActive(true);
         KerdesMenu.SetActive(false);

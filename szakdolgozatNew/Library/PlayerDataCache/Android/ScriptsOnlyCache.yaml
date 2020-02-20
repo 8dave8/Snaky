@@ -38,7 +38,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -47,10 +46,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1624,7 +1621,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11892}
     - Class: 114
-      Script: {instanceID: 31842}
+      Script: {instanceID: 11960}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2723,6 +2720,12 @@ ScriptsOnlyBuild:
     className: FloatingEnemy
   - hash:
       serializedVersion: 2
+      Hash: 998004cc6076f403e3b059cd4fdf6866
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: boss2Controller
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -2733,12 +2736,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 998004cc6076f403e3b059cd4fdf6866
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: boss2Controller
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

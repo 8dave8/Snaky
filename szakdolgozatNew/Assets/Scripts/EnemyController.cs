@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
     }
     private void DamageFlashing()
     {
-        StartCoroutine("Villog");
+        StartCoroutine("flash");
     }
     public void death(){         
          for (int i = 0; i < spawnedObjects+PlayerPrefs.GetInt("moreLoot"); i++)
@@ -57,7 +57,7 @@ public class EnemyController : MonoBehaviour
          PlayerPrefs.SetInt("killed", PlayerPrefs.GetInt("killed")+1);
          Destroy(this.gameObject); 
     }
-    IEnumerator Villog()
+    IEnumerator flash()
     {
         for (int i = 0; i < 5; i++)
         {

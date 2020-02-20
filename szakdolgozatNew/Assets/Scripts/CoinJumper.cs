@@ -11,6 +11,7 @@ public class CoinJumper : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(14,0);
         Physics2D.IgnoreLayerCollision(0, 13);
+        Physics2D.IgnoreLayerCollision(13, 13);
         Physics2D.IgnoreLayerCollision(10, 10, true);
         Rb2D.GetComponent<Rigidbody2D>();
     }

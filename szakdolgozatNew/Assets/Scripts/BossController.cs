@@ -13,7 +13,7 @@ public class BossController : MonoBehaviour
     {
         transform.position = new Vector3(FixXpos,transform.position.y,transform.position.z);
         rng = new System.Random();
-        StartCoroutine("Spawn");
+        StartCoroutine("spawnObstacle");
     }
     void FixedUpdate()
     {
@@ -25,14 +25,14 @@ public class BossController : MonoBehaviour
             Destroy(CurrentObstacle);
         }
     }
-    IEnumerator Spawn()
+    IEnumerator spawnObstacle()
     {
         yield return new WaitForSeconds(float.Parse(rng.Next(3,6).ToString()));
         CurrentObstacle = Instantiate(Obstacle,new Vector3(transform.position.x,transform.position.y+1.5f,0f),Quaternion.identity);
         CurrentObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(rng.Next(1, 6),rng.Next(5, 8));
         StartCoroutine("Spawn");
     }
-    IEnumerator Death()
+    IEnumerator bossDeath()
     {
         ToNextMap.GetComponent<BoxCollider2D>().enabled = true;
         ToNextMap.GetComponentInChildren<SpriteRenderer>().enabled = true;

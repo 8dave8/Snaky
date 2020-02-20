@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7508604262148544856}
   - component: {fileID: 7713348570602820399}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: HearthGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}

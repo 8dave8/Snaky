@@ -19,7 +19,7 @@ public class attackController : MonoBehaviour
         Physics.IgnoreLayerCollision(11,9);
         box.enabled = false;
     }
-    private void ThrowPebble()
+    private void throwPebble()
     {
         CharacterAnimator.GetComponent<Animator>().Play("Throw");
         pebbles--;
@@ -34,14 +34,14 @@ public class attackController : MonoBehaviour
         else if(pebbles == 2) Pebble2.GetComponent<Image>().sprite = FullPebble;
         else if(pebbles == 1) Pebble1.GetComponent<Image>().sprite = FullPebble;
     }
-    public void EnableDamage()
+    public void enableDamage()
     {
         if (attacking) return;
-        StartCoroutine("DisableDamage");
+        StartCoroutine("disableDamage");
         CharacterAnimator.GetComponent<Animator>().Play("Attack");
         CharacterAnimator.GetComponent<Animator>().SetBool("Jumping", false);
         }
-    IEnumerator DisableDamage()
+    IEnumerator disableDamage()
     {
         yield return new WaitForSeconds(attackStartDuration);
         transform.parent.gameObject.layer = 11;
@@ -52,12 +52,11 @@ public class attackController : MonoBehaviour
         attacking = false;
         box.enabled = false;
     }
-
     public void Throw()
     {
         if(canThrow == 1 && pebbles >=1)
         {
-            ThrowPebble();
+            throwPebble();
             float x = 8f;
             var currentObstacle = Instantiate(Obstacle,new Vector3(transform.position.x,transform.position.y+1.5f,0),Quaternion.identity);
             if(gameObject.transform.parent.localScale.x == -5 && x == 8) x = -8f;

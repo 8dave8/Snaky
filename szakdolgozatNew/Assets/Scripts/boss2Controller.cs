@@ -20,11 +20,10 @@ public class boss2Controller : MonoBehaviour
         {
             if(isAttacking == true) return;
             else isAttacking = true;
-            Debug.Log("Attackplayer");
-            StartCoroutine("Attack");
+            StartCoroutine("attack");
         }
     }
-    IEnumerator Attack()
+    IEnumerator attack()
     {
         Anim.SetTrigger("Attack");
         yield return new WaitForSeconds(0.15f);

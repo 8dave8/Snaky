@@ -12,19 +12,19 @@ public class Buttonfunctions : MonoBehaviour
         Time.timeScale = 1;
         CurrentMap.text = SceneManager.GetActiveScene().buildIndex.ToString();
     }
-    public void LoadScene(string name)
+    public void loadScene(string name)
     {
         SceneManager.LoadScene(name);
     }
-    public void LoadCurrentScene()
+    public void loadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void Stopgame()
+    public void stopGame()
     {
         Time.timeScale = 0;
     }
-    public void Resumegame()
+    public void resumeGame()
     {
         Time.timeScale = 1;
     }

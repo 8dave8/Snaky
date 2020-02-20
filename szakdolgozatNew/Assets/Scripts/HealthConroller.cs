@@ -30,11 +30,11 @@ public class HealthConroller : MonoBehaviour
         if (health == 2) hearth3.GetComponent<Image>().sprite = EmptyHearth;
         else if (health == 1) hearth2.GetComponent<Image>().sprite = EmptyHearth;
         else if (health == 0) hearth1.GetComponent<Image>().sprite = EmptyHearth;
-        if (health <= 0) Death();
+        if (health <= 0) death();
     }
     public void addHealth()
     {
-        if(health <= 0) Death();
+        if(health <= 0) death();
         if(health != 3) health++;
         PlayerPrefs.SetInt("hpGain", PlayerPrefs.GetInt("hpGain")+1);
         if(health == 3) hearth3.GetComponent<Image>().sprite = FullHearth;
@@ -64,7 +64,7 @@ public class HealthConroller : MonoBehaviour
         //dmg
         StartCoroutine("wait");
     }
-    private void Death()
+    private void death()
     {
         PlayerPrefs.SetInt("death",PlayerPrefs.GetInt("death")+1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

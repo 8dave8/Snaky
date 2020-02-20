@@ -7,7 +7,6 @@ public class emableThrow : MonoBehaviour
     public GameObject[] toEnable;
     void Start()
     {
-        Debug.Log(PlayerPrefs.GetInt("canThrow"));
         if(PlayerPrefs.GetInt("canThrow")==1)
         {
             for (int i = 0; i < toEnable.Length; i++)
