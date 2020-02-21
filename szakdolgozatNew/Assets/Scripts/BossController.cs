@@ -18,7 +18,7 @@ public class BossController : MonoBehaviour
     void FixedUpdate()
     {
         int hp = gameObject.GetComponent<EnemyController>().currentHP;
-        if (hp == 1) StartCoroutine("Death");
+        if (hp == 1) StartCoroutine("bossDeath");
         if(ToNextMap.GetComponent<BoxCollider2D>().enabled)
         {
             GetComponent<PolygonCollider2D>().enabled = false;
@@ -30,7 +30,7 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(float.Parse(rng.Next(3,6).ToString()));
         CurrentObstacle = Instantiate(Obstacle,new Vector3(transform.position.x,transform.position.y+1.5f,0f),Quaternion.identity);
         CurrentObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(rng.Next(1, 6),rng.Next(5, 8));
-        StartCoroutine("Spawn");
+        StartCoroutine("spawnObstacle");
     }
     IEnumerator bossDeath()
     {

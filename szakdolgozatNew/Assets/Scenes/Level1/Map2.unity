@@ -39090,6 +39090,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1720535585}
+    - target: {fileID: 7236834046590976236, guid: b5b3225678e260549abff6eeca26726e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enableDamage
+      objectReference: {fileID: 0}
     - target: {fileID: 7236834046996672593, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -39098,7 +39103,7 @@ PrefabInstance:
     - target: {fileID: 7236834046996672593, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAnsver
+      value: checkAnsver
       objectReference: {fileID: 0}
     - target: {fileID: 7236834047062829931, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
@@ -39108,7 +39113,7 @@ PrefabInstance:
     - target: {fileID: 7236834047062829931, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAnsver
+      value: checkAnsver
       objectReference: {fileID: 0}
     - target: {fileID: 7236834047779178002, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
@@ -39118,7 +39123,7 @@ PrefabInstance:
     - target: {fileID: 7236834047779178002, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAnsver
+      value: checkAnsver
       objectReference: {fileID: 0}
     - target: {fileID: 7236834047876301214, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
@@ -39128,7 +39133,7 @@ PrefabInstance:
     - target: {fileID: 7236834047876301214, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAnsver
+      value: checkAnsver
       objectReference: {fileID: 0}
     - target: {fileID: 8761309198348778703, guid: b5b3225678e260549abff6eeca26726e,
         type: 3}

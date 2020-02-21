@@ -30,7 +30,7 @@ public class boss2Controller : MonoBehaviour
         ColAttack.enabled = true;
         yield return new WaitForSeconds(0.14f);
         ColAttack.enabled = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.8f);
         isAttacking = false;
     }
 }
