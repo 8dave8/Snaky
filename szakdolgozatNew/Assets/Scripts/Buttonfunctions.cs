@@ -9,6 +9,7 @@ public class Buttonfunctions : MonoBehaviour
     public Text CurrentMap;
     void Start()
     {
+        Application.targetFrameRate = 300;
         Time.timeScale = 1;
         CurrentMap.text = SceneManager.GetActiveScene().buildIndex.ToString();
     }

@@ -51,6 +51,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -2750,4 +2751,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level2/Map10.unity
   - Assets/Scenes/Level2/Map11.unity
   - Assets/Scenes/Level2/MapBoss2.unity
-  playerPath: C:/Unity Projects/Szakdoganew/szakdoga.apk
+  playerPath: D:/Unity/Projects/Szakdolgozat/Szakdoganew/szakdolgozatNew/Builds/Snaky.apk
